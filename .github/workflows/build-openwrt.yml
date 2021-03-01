@@ -72,8 +72,7 @@ jobs:
       run: cd openwrt && ./scripts/feeds update -a && git clone https://github.com/tuanqing/install-program package/install-program
 
     - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a && find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-redir/shadowsocksr-libev-alt/g' {} && 
-find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-server/shadowsocksr-libev-server/g' {}
+      run: cd openwrt && ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
