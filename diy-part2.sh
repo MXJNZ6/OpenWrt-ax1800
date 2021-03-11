@@ -10,11 +10,17 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
-# Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+# 修改openwrt登陆地址,把下面的192.168.2.2修改成你想要的就可以了
+sed -i 's/192.168.1.1/192.168.2.3/g' package/base-files/files/bin/config_generate
 
 # Installation dependencies
 find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-redir/shadowsocksr-libev-alt/g' {} && find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-server/shadowsocksr-libev-server/g' {}
 
 #Cancel the default theme
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+
+# 修改主机名字，把OpenWrt-123修改你喜欢的就行（不能纯数字或者使用中文）
+#sed -i '/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-CE'' package/lean/default-settings/files/zzz-default-settings
+
+# 修改 Edge 为默认主题,可根据你喜欢的修改成其他的（不选择那些会自动改变为默认主题的主题才有效果）
+#sed -i 's/luci-theme-bootstrap/luci-theme-Edge/g' feeds/luci/collections/luci/Makefile
