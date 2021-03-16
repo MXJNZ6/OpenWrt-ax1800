@@ -24,6 +24,5 @@ git clone https://github.com/garypang13/luci-app-bypass.git package/luci-app-byp
 rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
-git clone https://github.com/garypang13/luci-app-bypass.git package/luci-app-bypass
 #git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
 #svn co https://github.com/garypang13/openwrt-packages/trunk/smartdns package/smartdns
