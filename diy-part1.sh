@@ -15,6 +15,15 @@
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
+#git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
+#git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
 git clone https://github.com/project-lede/luci-app-godproxy.git package/luci-app-godproxy
 git clone https://github.com/garypang13/luci-app-bypass.git package/luci-app-bypass
+#git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
+#git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
+rm -rf package/lean/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+git clone https://github.com/garypang13/luci-app-bypass.git package/luci-app-bypass
+#git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
+#svn co https://github.com/garypang13/openwrt-packages/trunk/smartdns package/smartdns
