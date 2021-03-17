@@ -19,6 +19,7 @@
 #git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
 git clone https://github.com/project-lede/luci-app-godproxy.git package/luci-app-godproxy
 git clone https://github.com/garypang13/luci-app-bypass.git package/luci-app-bypass
+git clone https://github.com/garypang13/smartdns-le package/smartdns-le
 #git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 #git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
 rm -rf package/lean/luci-theme-argon
