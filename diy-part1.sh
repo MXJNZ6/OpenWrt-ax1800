@@ -33,3 +33,5 @@ git clone https://github.com/MXJNZ6/diy-ziyong package/diy-ziyong
 git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 rm -rf package/lean/luci-app-nfs
 svn co https://github.com/Twinzo1/openwrt-package/trunk/luci-app-nfs package/luci-app-nfs
+rm -rf package/lean/luci-app-samba4
+svn co https://github.com/Tonkercke/luci/trunk/applications/luci-app-samba4 package/luci-app-samba4
