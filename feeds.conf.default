@@ -13,4 +13,3 @@ src-git lienol https://github.com/xiaorouji/openwrt-passwall
 #src-git GameAcc https://github.com/BCYDTZ/GameAcc
 #src-git opentopd https://github.com/sirpdboy/luci-theme-opentopd
 src-git infinityfreedom https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
-src-git opentopd  https://github.com/sirpdboy/luci-theme-opentopd
