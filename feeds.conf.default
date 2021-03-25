@@ -7,11 +7,10 @@ src-git telephony https://git.openwrt.org/feed/telephony.git
 #src-git management https://github.com/openwrt-management/packages.git
 #src-git oldpackages http://git.openwrt.org/packages.git
 #src-link custom /usr/src/openwrt/custom-feed
-#src-git helloworld https://github.com/fw876/helloworld
-#src-git lienol https://github.com/xiaorouji/openwrt-passwall
+src-git helloworld https://github.com/fw876/helloworld
+src-git lienol https://github.com/xiaorouji/openwrt-passwall
 #src-git NetSpeedTest  https://github.com/sirpdboy/NetSpeedTest
 #src-git GameAcc https://github.com/BCYDTZ/GameAcc
 #src-git opentopd https://github.com/sirpdboy/luci-theme-opentopd
 src-git infinityfreedom https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
-src-git kenzo https://github.com/kenzok8/openwrt-packages
-src-git small https://github.com/kenzok8/small
+src-git opentopd  https://github.com/sirpdboy/luci-theme-opentopd
