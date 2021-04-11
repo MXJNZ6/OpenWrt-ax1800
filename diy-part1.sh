@@ -31,5 +31,3 @@ git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
 git clone https://github.com/MXJNZ6/diy-ziyong package/diy-ziyong
 git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
-rm -rf package/lean/luci-app-samba4
-svn co https://github.com/lw9726/hiwifi1/trunk/package/lean/luci-app-samba4 package/luci-app-samba4
