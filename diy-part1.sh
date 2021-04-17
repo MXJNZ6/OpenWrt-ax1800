@@ -32,3 +32,4 @@ git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luc
 git clone https://github.com/MXJNZ6/diy-ziyong package/diy-ziyong
 git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 git clone https://github.com/ZhanhuaJin/luci-app-pptp-server package/luci-app-pptp-server
+git clone https://github.com/chenhw2/luci-app-aliddns.git package/luci-app-aliddns
