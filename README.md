@@ -4,7 +4,8 @@
 插件预览
 ![image](https://user-images.githubusercontent.com/53927877/115956835-b561d400-a531-11eb-9b09-7c692eee96ec.png)
 ![image](https://user-images.githubusercontent.com/53927877/115956842-be52a580-a531-11eb-8df3-242dff18901b.png)
-![image](https://user-images.githubusercontent.com/53927877/115956854-d1657580-a531-11eb-9ba2-fccb68c7be72.png)![image](https://user-images.githubusercontent.com/53927877/115956866-dfb39180-a531-11eb-8f39-87bba874363d.png)
+![image](https://user-images.githubusercontent.com/53927877/115956854-d1657580-a531-11eb-9ba2-fccb68c7be72.png)
+![image](https://user-images.githubusercontent.com/53927877/115956866-dfb39180-a531-11eb-8f39-87bba874363d.png)
 ![image](https://user-images.githubusercontent.com/53927877/115956874-eb9f5380-a531-11eb-89ed-487e37b87682.png)
 ![image](https://user-images.githubusercontent.com/53927877/115956880-f659e880-a531-11eb-99e1-5b0bd1b8151f.png)
 ![image](https://user-images.githubusercontent.com/53927877/115956890-0245aa80-a532-11eb-9fe8-4609f464fe55.png)
