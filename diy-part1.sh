@@ -13,6 +13,10 @@
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
+#readd cpufreq for aarch64
+#sed -i 's/LUCI_DEPENDS.*/LUCI_DEPENDS:=\@\(arm\|\|aarch64\)/g' package/lean/luci-app-cpufreq/Makefile
+#sed -i 's/services/system/g'  package/lean/luci-app-cpufreq/luasrc/controller/cpufreq.lua
+
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
