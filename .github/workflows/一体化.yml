@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt
+name: Build
 
 on:
   repository_dispatch:
@@ -121,7 +121,7 @@ jobs:
         path: openwrt/bin
 
     - name: Organize files
-      id: organize
+      id: organizes
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
         cd openwrt/bin/targets/*/*
@@ -129,7 +129,6 @@ jobs:
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
 
-    steps:
     - name: Checkout
       uses: actions/checkout@main
       
