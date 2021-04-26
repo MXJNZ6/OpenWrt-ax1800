@@ -140,9 +140,6 @@ jobs:
     env:
       FLIPPY_NAME: ${{ matrix.flippy_name }}   
       RELEASE_NAME: ${{ matrix.release_name }}
-
-    - name: Checkout
-      uses: actions/checkout@main
       
     - name: Initialization environment
       run: |     
