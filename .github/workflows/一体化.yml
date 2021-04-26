@@ -129,14 +129,29 @@ jobs:
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
 
+    name: Build for ${{ matrix.flippy_name }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - flippy_name: 58
+            release_name: N1-58+o.img
+
+    env:
+      FLIPPY_NAME: ${{ matrix.flippy_name }}   
+      RELEASE_NAME: ${{ matrix.release_name }}
+    steps:
     - name: Checkout
       uses: actions/checkout@main
       
     - name: Initialization environment
       run: |     
-      
+        
+        echo "version=$version"  >> $GITHUB_ENV
+        echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")"  >> $GITHUB_ENV
+        
         sudo chmod  -R 777 /opt
-        cp -r /opt/* /opt      
+        cp -r ${FLIPPY_NAME}/opt/* /opt
 
     - name: Download
       run: |
