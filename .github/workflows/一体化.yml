@@ -128,18 +128,6 @@ jobs:
         rm -rf packages
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
-
-    name: Build for ${{ matrix.flippy_name }}
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - flippy_name: 58
-            release_name: N1-58+o.img
-
-    env:
-      FLIPPY_NAME: ${{ matrix.flippy_name }}   
-      RELEASE_NAME: ${{ matrix.release_name }}
       
     - name: Initialization environment
       run: |     
@@ -148,7 +136,7 @@ jobs:
         echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")"  >> $GITHUB_ENV
         
         sudo chmod  -R 777 /opt
-        cp -r ${FLIPPY_NAME}/opt/* /opt
+        cp -r 58/opt/* /opt
 
     - name: Download
       run: |
@@ -176,10 +164,12 @@ jobs:
         cd /opt/kernel
         sudo chmod +x mk_s905d_n1.sh
         sudo ./mk_s905d_n1.sh 
+        
     - name: copy update files
       run: |
         cd /opt/kernel
         sudo cp files/update-amlogic-openwrt.sh tmp/update-amlogic-openwrt.sh
+        
     - name: pigz -9
       id: pigz
       run: |
@@ -187,10 +177,12 @@ jobs:
         cd /opt/kernel/tmp
         sudo time tar -cvf - openwrt_s905d_n1_R21.4.18_k5.4.114-flippy-58+o.img/ | pigz -p 2 > N1-58+o.tar.gz
         echo "::set-output name=status::success"
+        
     - name: Check Files4
       run: |
         cd /opt/kernel/tmp
         ls
+        
     - name: 编译后硬盘容量
       if: (!cancelled())
       run: df -hT
@@ -202,6 +194,7 @@ jobs:
         cd /opt/kernel/tmp
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
+        
     - name: Upload firmware directory
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
@@ -216,6 +209,7 @@ jobs:
         ./transfer cow --block 2621440 -s -p 64 --no-progress /opt/openwrt/tmp/$RELEASE_NAME.gz 2>&1 | tee cowtransfer.log
         echo "::warning file=cowtransfer.com::$(cat cowtransfer.log | grep https)"
         echo "::set-output name=url::$(cat cowtransfer.log | grep https | cut -f3 -d" ")"        
+        
     - name: Generate release tag
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
