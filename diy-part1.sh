@@ -31,10 +31,9 @@ svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser pack
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-fileassistant package/luci-app-fileassistant
 #git clone https://github.com/garypang13/luci-app-eqos package/luci-app-eqos
 #git clone https://github.com/frainzy1477/luci-app-clash.git package/luci-app-clash
-#git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
 git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 #git clone https://github.com/ZhanhuaJin/luci-app-pptp-server package/luci-app-pptp-server
 git clone https://github.com/chenhw2/luci-app-aliddns.git package/luci-app-aliddns
-svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
+svn co https://github.com/messense/aliyundrive-webdav/trunk/luci-app-aliyundrive-webdav package/luci-app-aliyundrive-webdav
