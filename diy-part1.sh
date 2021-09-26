@@ -37,3 +37,4 @@ git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-ope
 #git clone https://github.com/ZhanhuaJin/luci-app-pptp-server package/luci-app-pptp-server
 git clone https://github.com/chenhw2/luci-app-aliddns.git package/luci-app-aliddns
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/luci-app-aliyundrive-webdav
+git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
