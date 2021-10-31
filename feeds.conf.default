@@ -9,5 +9,4 @@ src-git telephony https://git.openwrt.org/feed/telephony.git
 src-git helloworld https://github.com/fw876/helloworld
 src-git lienol https://github.com/xiaorouji/openwrt-passwall
 #src-git NetSpeedTest  https://github.com/sirpdboy/NetSpeedTest
-#src-git GameAcc https://github.com/BCYDTZ/GameAcc
 src-git infinityfreedom https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
