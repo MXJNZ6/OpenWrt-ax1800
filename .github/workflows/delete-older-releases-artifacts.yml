@@ -10,14 +10,14 @@ on:
   repository_dispatch:
   workflow_dispatch:
   schedule:
-    - cron: '0 23 * * *'
+    - cron: '0 8/12 * * *'
 
 env:
   DELETE_RELEASE: true
   DELETE_ARTIFACTS: true
   KEEP_DAY: 1
   KEEP_MININUM_RUNS: 0
-  KEEP_MININUM_RELEASE: 2
+  KEEP_MININUM_RELEASE: 5
 
 jobs:
   build:
