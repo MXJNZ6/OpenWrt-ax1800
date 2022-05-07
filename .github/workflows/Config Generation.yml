@@ -20,7 +20,7 @@ env:
   DIY_P2_SH: diy-part2.sh
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: false
-  CONFIG: Aarch64
+  CONFIG: AX1800
   TZ: Asia/Shanghai
   
 jobs:
