@@ -18,8 +18,6 @@ svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/luci
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser package/luci-app-filebrowser
 svn co https://github.com/kenzok8/jell/trunk/luci-app-dockerman package/luci-app-dockerman
 svn co https://github.com/kenzok8/jell/trunk/luci-app-docker package/luci-app-docker
-svn co https://github.com/Lienol/openwrt-packages/branches/19.07/utils/docker feeds/packages/utils/docker/
-svn co https://github.com/Lienol/openwrt-packages/branches/19.07/utils/dockerd feeds/packages/utils/dockerd/
 
 git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
@@ -33,10 +31,8 @@ sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall;luci' 
 # Update feeds
 ./scripts/feeds update -a
 
-#cp -r package/luci-app-docker feeds/luci/applications/luci-app-docker/
-#cp -r package/luci-app-dockerman feeds/luci/applications/luci-app-dockerman/
-#cp -r package/luci-app-smartdns feeds/luci/applications/luci-app-smartdns/
-#cp -r package/smartdns feeds/packages/net/smartdns/
+svn co https://github.com/Lienol/openwrt-packages/branches/19.07/utils/docker feeds/packages/utils/docker/
+svn co https://github.com/Lienol/openwrt-packages/branches/19.07/utils/dockerd feeds/packages/utils/dockerd/
 
 # Install feeds
 ./scripts/feeds install -a
