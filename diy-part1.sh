@@ -33,10 +33,10 @@ sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall;luci' 
 # Update feeds
 ./scripts/feeds update -a
 
-sudo mv package/luci-app-docker/* feeds/luci/applications/luci-app-docker
-sudo mv package/luci-app-dockerman/* feeds/luci/applications/luci-app-dockerman
-sudo mv package/luci-app-smartdns/* feeds/luci/applications/luci-app-smartdns
-sudo mv package/smartdns/* feeds/packages/net/smartdns
+cp -r package/luci-app-docker feeds/luci/applications/luci-app-docker/
+cp -r package/luci-app-dockerman feeds/luci/applications/luci-app-dockerman/
+cp -r package/luci-app-smartdns feeds/luci/applications/luci-app-smartdns/
+cp -r package/smartdns feeds/packages/net/smartdns/
 
 # Install feeds
 ./scripts/feeds install -a
