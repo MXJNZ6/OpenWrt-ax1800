@@ -18,6 +18,8 @@ svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/luci
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser package/luci-app-filebrowser
 svn co https://github.com/kenzok8/jell/trunk/luci-app-dockerman package/luci-app-dockerman
 svn co https://github.com/kenzok8/jell/trunk/luci-app-docker package/luci-app-docker
+svn co https://github.com/Lienol/openwrt-packages/branches/19.07/utils/docker feeds/packages/utils/docker/
+svn co https://github.com/Lienol/openwrt-packages/branches/19.07/utils/dockerd feeds/packages/utils/dockerd/
 
 git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
