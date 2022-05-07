@@ -75,7 +75,7 @@ jobs:
         cd openwrt
         make defconfig
         ls -a
-        sudo mkdir ${{ env.CONFIG }}config && mv .config ${{ env.CONFIG }}config/${{ env.CONFIG }}.config
+        sudo mkdir ${{ env.CONFIG }}config && sudo mv .config ${{ env.CONFIG }}config/${{ env.CONFIG }}.config
         cd ${{ env.CONFIG }}config
         ls
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
