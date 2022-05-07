@@ -16,7 +16,7 @@ sed -i 's/192.168.1.1/192.168.2.22/g' package/base-files/files/bin/config_genera
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/luci-app-aliyundrive-webdav
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser package/luci-app-filebrowser
-svn co https://github.com/kenzok8/jell/trunk/luci-app-dockerman package/luci-app-dockerman
+svn co https://github.com/lisaac/luci-app-dockerman/tunk/applications/luci-app-dockerman package/luci-app-dockerman
 
 git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
