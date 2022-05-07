@@ -75,12 +75,9 @@ jobs:
         cd openwrt
         make defconfig
         ls -a
-        sudo mkdir ${{ env.CONFIG }}config
-        ls -a
-        mv .config ${{ env.CONFIG }}.config
-        sudo cp ${{ env.CONFIG }}.config ${{ env.CONFIG }}config/
+        sudo mkdir ${{ env.CONFIG }}config && mv .config ${{ env.CONFIG }}config/${{ env.CONFIG }}.config
         cd ${{ env.CONFIG }}config
-        ls -a
+        ls
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
         echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
