@@ -16,10 +16,8 @@ sed -i 's/192.168.1.1/192.168.2.22/g' package/base-files/files/bin/config_genera
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/luci-app-aliyundrive-webdav
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser package/luci-app-filebrowser
-svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-dockerman package/luci-app-dockerman
-svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-docker package/luci-app-docker
-svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-smartdns package/luci-app-smartdns
-svn co https://github.com/immortalwrt/packages/trunk/net/smartdns package/smartdns
+svn co https://github.com/kenzok8/jell/trunk/luci-app-dockerman package/luci-app-dockerman
+svn co https://github.com/kenzok8/jell/trunk/luci-app-docker package/luci-app-docker
 
 git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
@@ -33,10 +31,10 @@ sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall;luci' 
 # Update feeds
 ./scripts/feeds update -a
 
-cp -r package/luci-app-docker feeds/luci/applications/luci-app-docker/
-cp -r package/luci-app-dockerman feeds/luci/applications/luci-app-dockerman/
-cp -r package/luci-app-smartdns feeds/luci/applications/luci-app-smartdns/
-cp -r package/smartdns feeds/packages/net/smartdns/
+#cp -r package/luci-app-docker feeds/luci/applications/luci-app-docker/
+#cp -r package/luci-app-dockerman feeds/luci/applications/luci-app-dockerman/
+#cp -r package/luci-app-smartdns feeds/luci/applications/luci-app-smartdns/
+#cp -r package/smartdns feeds/packages/net/smartdns/
 
 # Install feeds
 ./scripts/feeds install -a
