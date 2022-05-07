@@ -73,6 +73,7 @@ jobs:
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
         cd openwrt
+        make defconfig
         ls -a
         sudo mkdir ${{ env.CONFIG }}config
         ls -a
