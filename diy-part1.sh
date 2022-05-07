@@ -17,7 +17,6 @@ svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/l
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/luci-app-aliyundrive-webdav
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser package/luci-app-filebrowser
 svn co https://github.com/kenzok8/jell/trunk/luci-app-dockerman package/luci-app-dockerman
-svn co https://github.com/kenzok8/jell/trunk/luci-app-docker package/luci-app-docker
 
 git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
@@ -30,9 +29,6 @@ sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall;luci' 
 
 # Update feeds
 ./scripts/feeds update -a
-
-svn co https://github.com/Lienol/openwrt-packages/branches/19.07/utils/docker feeds/packages/utils/docker/
-svn co https://github.com/Lienol/openwrt-packages/branches/19.07/utils/dockerd feeds/packages/utils/dockerd/
 
 # Install feeds
 ./scripts/feeds install -a
