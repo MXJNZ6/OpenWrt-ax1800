@@ -95,6 +95,8 @@ jobs:
       id: organize
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
+        cd $GITHUB_WORKSPACE/openwrt/bin/targets/*/*
+        tar -zcvf kmod-Packages.tar.gz ./packages
         cd $GITHUB_WORKSPACE/openwrt/bin/packages
         tar -zcvf F-AllPackages.tar.gz ./*
         cp F-AllPackages.tar.gz $GITHUB_WORKSPACE/openwrt/bin/targets/*/*
