@@ -27,7 +27,7 @@ env:
   DIY_P2_SH: diy-part2.sh
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
-  FILE_NAME: Aarch64
+  FILE_NAME: ax1800
   TZ: Asia/Shanghai
 
 jobs:
