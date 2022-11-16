@@ -30,7 +30,7 @@ jobs:
 
     - name: Delete older releases
       #uses: dev-drprasad/delete-older-releases@v0.2.0
-      uses: dev-drprasad/delete-older-releases@v0.2.0
+      uses: Vucko130/delete-older-releases@v0.2.1
       if: env.DELETE_RELEASE == 'true'
       with:
         keep_latest: ${{ env.KEEP_MININUM_RELEASE }}
